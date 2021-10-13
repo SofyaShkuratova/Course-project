@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir';
+
+}
+
+body {
+    >header,
+    >main,
+    >footer {
+        max-width: 1400px;
+        margin: 0 auto;
+        
+        
+    }
+
+    header {
+        max-width: 1240px;
+        margin: 0 auto;
+        
+        nav#nav {
+            height: 100px;
+            
+            
+            text-transform: uppercase;
+           
+            ul.menu {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            font-size: 13px;
+            font-weight: 400;
+            padding: 40px 0;
+            
+                &>li:first-child {
+                    margin-right: auto;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 21px;
+                    font-weight: 400;
+                }
+
+                &>li:not(:first-child) {
+                    padding-left: 20px;
+                }
+
+                &>li:hover:not(:first-child) {
+                    color: #838383;
+                }
+            
+            } 
+        }
+
+        >section.slider {
+            
+            height: 900px;
+            background: url('IMG_7241.png');
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 60% ;
+
+        } 
+        
+    }
+
+    main {
+        height: 5300px;
+        background: linear-gradient(0deg, rgba(255,255,255,1) 18%, rgba(0,0,0,1) 18%, rgba(0,0,0,1) 90%, rgba(255,255,255,1) 90%);
+
+        section.section {
+            &__first {
+                max-width: 1240px;
+                margin: 60px auto;
+                height: 850px;
+                background: url('IMG_17001.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &__text {
+                max-width: 1400px;
+                height: 350px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                color: #fff;
+
+            }
+
+               
+        }
+        
+    }
+}

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Avenir';
+}
+
+body > header,
+body > main,
+body > footer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body header {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+body header nav#nav {
+  height: 100px;
+  text-transform: uppercase;
+}
+
+body header nav#nav ul.menu {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 40px 0;
+}
+
+body header nav#nav ul.menu > li:first-child {
+  margin-right: auto;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+body header nav#nav ul.menu > li:not(:first-child) {
+  padding-left: 20px;
+}
+
+body header nav#nav ul.menu > li:hover:not(:first-child) {
+  color: #838383;
+}
+
+body header > section.slider {
+  height: 900px;
+  background: url("IMG_7241.png");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 60%;
+}
+
+body main {
+  height: 5300px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(18%, white), color-stop(18%, black), color-stop(90%, black), color-stop(90%, white));
+  background: linear-gradient(0deg, white 18%, black 18%, black 90%, white 90%);
+}
+
+body main section.section__first {
+  max-width: 1240px;
+  margin: 60px auto;
+  height: 850px;
+  background: url("IMG_17001.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main section.section__text {
+  max-width: 1400px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+}
