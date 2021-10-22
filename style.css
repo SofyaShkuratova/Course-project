@@ -67,9 +67,9 @@ body header > section.slider {
 
 body main {
   max-width: 100%;
-  height: 5300px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(18%, white), color-stop(18%, black), color-stop(90%, black), color-stop(90%, white));
-  background: linear-gradient(0deg, white 18%, black 18%, black 90%, white 90%);
+  height: 6000px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(45%, white), color-stop(45%, black), color-stop(90%, black), color-stop(90%, white));
+  background: linear-gradient(0deg, white 45%, black 45%, black 90%, white 90%);
 }
 
 body main section.section__first {
@@ -181,4 +181,77 @@ body main section.section__second .section__second__div div div:not(:nth-child(2
 body main section.section__second .section__second__div div div.section__article__pararaph {
   font-size: 14px;
   line-height: 19px;
+}
+
+body main section.section__third {
+  max-width: 1400px;
+  height: 820px;
+  margin: 0 auto;
+}
+
+body main section.section__third div.section__third__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main section.section__third div.section__third__container__second {
+  color: #fff;
+  margin-left: 50px;
+  width: 400px;
+}
+
+body main section.section__third div.section__third__container__second div {
+  font-size: 16px;
+}
+
+body main section.section__third div.section__third__container__second div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+body main section.section__third div.section__third__container__second h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  margin-top: 350px;
+}
+
+body main section.section__third div.section__third__container__second .section__article__pararaph {
+  font-size: 14px;
+}
+
+body main section.section__fourth {
+  max-width: 1240px;
+  margin: 100px auto;
+  height: 780px;
+  background: url("IMG_0208.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 79px 715px 500px 125px;
+}
+
+body main section.section__fourth article.section__fourth__container {
+  color: #fff;
+  width: 500px;
+}
+
+body main section.section__fourth article.section__fourth__container div {
+  font-size: 16px;
+}
+
+body main section.section__fourth article.section__fourth__container div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+body main section.section__fourth article.section__fourth__container h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+body main section.section__fourth article.section__fourth__container .section__article__pararaph {
+  font-size: 14px;
 }
