@@ -131,3 +131,54 @@ body main section.section__text {
       justify-content: space-around;
   color: #fff;
 }
+
+body main section.section__text div {
+  margin: 80px 60px;
+}
+
+body main section.section__text div *:not(:nth-child(1)) {
+  padding-top: 35px;
+}
+
+body main section.section__second {
+  height: 750px;
+  max-width: 1240px;
+  background-color: #28454B;
+  margin: 80px auto;
+  padding: 40px 93px 60px 200px;
+  color: #fff;
+  text-align: right;
+}
+
+body main section.section__second .section__second__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.section__second .section__second__div div.section__second__div_first {
+  margin-right: 50px;
+}
+
+body main section.section__second .section__second__div h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  margin-top: 300px;
+}
+
+body main section.section__second .section__second__div div div {
+  font-size: 16px;
+}
+
+body main section.section__second .section__second__div div div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+body main section.section__second .section__second__div div div.section__article__pararaph {
+  font-size: 14px;
+  line-height: 19px;
+}

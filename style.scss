@@ -25,10 +25,10 @@ body {
         nav#nav {
             height: 100px;
             
-            
             text-transform: uppercase;
            
             ul.menu {
+            
             list-style-type: none;
             display: flex;
             flex-direction: row;
@@ -124,9 +124,55 @@ body {
                 justify-content: space-around;
                 color: #fff;
 
+                div {
+                    margin:  80px 60px;
+                    & *:not(:nth-child(1)) {
+                        padding-top: 35px; 
+                    }
+                }
+
             }
 
-               
+            &__second {
+                height: 750px;
+                max-width: 1240px;
+                background-color: #28454B;
+                margin: 80px auto;
+                padding: 40px 93px 60px 200px;
+                color: #fff;
+                text-align: right;
+
+                .section__second__div {
+                    display: flex;
+                    justify-content: space-between;
+
+                    div.section__second__div_first {
+                        margin-right: 50px;
+                    }
+
+                    h4 {
+                        font-size: 36px;
+                        font-weight: 400;
+                        line-height: 46px;
+                        margin-top: 300px;
+                    }
+                    div div {
+                        font-size: 16px;
+                        
+                        &:not(:nth-child(2)) {
+                            margin-top: 23px;
+                        }
+
+                        &.section__article__pararaph {
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+                
+                
+                    
+            }
         }
         
     }
