@@ -20,12 +20,10 @@ body header {
 }
 
 body header nav#nav {
-  height: 100px;
+  padding: 30px 0;
+  height: 80px;
   text-transform: uppercase;
-}
-
-body header nav#nav ul.menu {
-  list-style-type: none;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,32 +31,121 @@ body header nav#nav ul.menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-size: 13px;
-  font-weight: 400;
-  padding: 40px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body header nav#nav ul.menu > li:first-child {
-  margin-right: auto;
+body header nav#nav li {
+  margin: 0;
+}
+
+body header nav#nav > div:first-child {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 21px;
   font-weight: 400;
 }
 
-body header nav#nav ul.menu > li:not(:first-child) {
-  padding-left: 20px;
+body header nav#nav #menu {
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0;
 }
 
-body header nav#nav ul.menu > li:hover:not(:first-child) {
-  color: #838383;
+body header nav#nav #menu > li {
+  padding: 0 10px 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  width: 90px;
+}
+
+body header nav#nav #menu > li > ul#drop {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 80px;
+}
+
+body header nav#nav #menu > li > ul#drop div {
+  padding: 0;
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+  position: relative;
+}
+
+body header nav#nav #menu > li > ul#drop li {
+  display: block;
+  padding: 0;
+  background: #747474 !important;
+}
+
+body header nav#nav #menu #marker {
+  padding: 0;
+  height: 5px;
+  background: #b6b6b6;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  width: 90px;
+}
+
+body header #menu li:nth-child(1):hover ul#drop div {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+body header #menu li:nth-child(1):hover ~ #marker {
+  -webkit-transform: translate(0px, 0);
+  transform: translate(0px, 0);
+}
+
+body header #menu li:nth-child(2):hover ul#drop div {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+body header #menu li:nth-child(2):hover ~ #marker {
+  -webkit-transform: translate(90px, 0);
+  transform: translate(90px, 0);
+}
+
+body header #menu li:nth-child(3):hover ul#drop div {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+body header #menu li:nth-child(3):hover ~ #marker {
+  -webkit-transform: translate(180px, 0);
+  transform: translate(180px, 0);
+}
+
+body header #menu li:nth-child(4):hover ul#drop div {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+body header #menu li:nth-child(4):hover ~ #marker {
+  -webkit-transform: translate(270px, 0);
+  transform: translate(270px, 0);
 }
 
 body header > section.slider {
   height: 900px;
-  background: url("IMG_7241.png");
+  background: url("img/mainpage/IMG_7241.png");
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +162,7 @@ body main section.section__first {
   max-width: 1240px;
   margin: 60px auto;
   height: 850px;
-  background: url("IMG_17001.png");
+  background: url("img/mainpage/IMG_17001.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 79px 715px 500px 125px;
@@ -229,7 +316,7 @@ body main section.section__fourth {
   max-width: 1240px;
   margin: 100px auto 50px;
   height: 780px;
-  background: url("IMG_0208.jpeg");
+  background: url("img/mainpage/IMG_0208.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 79px 715px 500px 125px;
@@ -271,9 +358,9 @@ body main section.section__fifth div.parent {
   max-width: 1350px;
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (450px)[3]; */
+  -ms-grid-columns: (450px)[3];
       grid-template-columns: repeat(3, 450px);
-  /* -ms-grid-rows: (500px)[3]; */
+  -ms-grid-rows: (500px)[3];
       grid-template-rows: repeat(3, 500px);
   gap: 10px;
   border: 10px solid #fff;

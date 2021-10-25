@@ -7,6 +7,18 @@
     font-family: 'Avenir';
 
 }
+@mixin transform($value){
+    -webkit-transform: ($value);
+       -moz-transform: ($value);
+        -ms-transform: ($value);
+            transform: ($value);
+  }
+  @mixin transition($value){
+    -webkit-transition: ($value);
+       -moz-transition: ($value);
+        -ms-transition: ($value);
+            transition: ($value);
+  }
 
 body {
     >header,
@@ -23,42 +35,103 @@ body {
         margin: 0 auto;
         
         nav#nav {
-            height: 100px;
-            
+            li {
+                margin: 0;
+            }
+            padding: 30px 0;
+            height: 80px;
             text-transform: uppercase;
-           
-            ul.menu {
-            
-            list-style-type: none;
+            background-color: #fff;
+            // padding: 30px;
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: space-between;
+
+            >div:first-child {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 21px;
+                font-weight: 400;
+                
+            }
+
+            #menu {
+            text-align: center;    
+            list-style-type: none;
+            position: relative;
+            display: inline-block;
+
+            
             font-size: 13px;
             font-weight: 400;
-            padding: 40px 0;
+            padding: 0;
             
-                &>li:first-child {
-                    margin-right: auto;
-                    font-family: 'Josefin Sans', sans-serif;
-                    font-size: 21px;
-                    font-weight: 400;
+                
+
+                &>li {
+                    padding: 0 10px 10px;
+                    padding-bottom: 10px;
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    z-index: 5;
+                    width: 90px;
+                    // &:not(:first-child) {
+                    //     padding-left: 40px;
+                    // }
+                    >ul#drop {
+                    overflow: hidden;
+                    list-style: none;
+                    position: absolute;
+                    padding: 0;
+                    width: 100%;
+                    left: 0;
+                    top: 80px;
+
+                    div {
+                        padding: 0;
+                        @include transform(translate(0,-100%));
+                        @include transition(all 0.5s 0.1s);
+                        position: relative;
+                    }
+                    li {
+                        display:block;
+                        padding: 0;
+                        background: #747474 !important;
+                    }
+                }
                 }
 
-                &>li:not(:first-child) {
-                    padding-left: 20px;
-                }
+                
 
-                &>li:hover:not(:first-child) {
-                    color: #838383;
+                #marker {
+                    padding: 0;
+                    height: 5px;
+                    background: #b6b6b6;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 2;
+                    @include transition(all 0.35s);
+                    width: 90px;
                 }
             
             } 
         }
 
+        @for $i from 1 through 4{
+            #menu li:nth-child(#{$i}){
+              &:hover ul#drop div{
+                @include transform(translate(0,0));  
+              }
+              &:hover ~ #marker{
+                @include transform(translate(#{(-1+$i)*90px},0));
+              }
+            }    
+          }
+
         >section.slider {
             
             height: 900px;
-            background: url('IMG_7241.png');
+            background: url('img/mainpage/IMG_7241.png');
             position: relative;
             background-repeat: no-repeat;
             background-size: cover;
@@ -80,7 +153,7 @@ body {
                 max-width: 1240px;
                 margin: 60px auto;
                 height: 850px;
-                background: url('IMG_17001.png');
+                background: url('img/mainpage/IMG_17001.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 padding: 79px 715px 500px 125px;
@@ -221,7 +294,7 @@ body {
                 max-width: 1240px; 
                 margin: 100px auto 50px;
                 height: 780px;
-                background: url('IMG_0208.jpeg');
+                background: url('img/mainpage/IMG_0208.jpeg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 padding: 79px 715px 500px 125px;
