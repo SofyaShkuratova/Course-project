@@ -12,7 +12,7 @@ body {
     >header,
     >main,
     >footer {
-        max-width: 1400px;
+        max-width: 100%;
         margin: 0 auto;
         
         
@@ -69,9 +69,11 @@ body {
     }
 
     main {
-        max-width: 100%;
-        height: 6000px;
+        // max-width: 100%;
+        
+        height: 5700px;
         background: linear-gradient(0deg, rgba(255,255,255,1) 45%, rgba(0,0,0,1) 45%, rgba(0,0,0,1) 90%, rgba(255,255,255,1) 90%);
+        
 
         section.section {
             &__first {
@@ -116,16 +118,19 @@ body {
                     }
                 }
             }
+
             &__text {
                 max-width: 1400px;
                 height: 350px;
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: space-around;
                 color: #fff;
 
                 div {
-                    margin:  80px 60px;
+                    width: 350px;
+                    margin:  80px 0;
                     & *:not(:nth-child(1)) {
                         padding-top: 35px; 
                     }
@@ -211,9 +216,10 @@ body {
 
 
             }
+
             &__fourth {
                 max-width: 1240px; 
-                margin: 100px auto;
+                margin: 100px auto 50px;
                 height: 780px;
                 background: url('IMG_0208.jpeg');
                 background-repeat: no-repeat;
@@ -244,7 +250,68 @@ body {
                     }
                 }
             }
+
+            &__fifth {
+                
+                h2 {
+                    font-family: Avenir;
+                    font-size: 60px;
+                    font-weight: 800px;
+                    text-align: center;
+                    display: block;
+                    margin-bottom: 50px;
+                }
+                div.parent {
+                    max-width: 1350px;
+                    display: grid;
+                    // height: 1500px;
+                    // background-color: rgb(182, 3, 3);
+                    grid-template-columns: repeat(3, 450px);
+                    grid-template-rows: repeat(3, 500px);
+                    gap: 10px ;
+                    border: 10px solid #fff;
+                    
+                    
+
+                    div.child img:hover {
+                        
+                        opacity: 0.5;
+                        transition: .5s ease-out;
+                    }
+
+                    .child {
+                        background-color: rgb(0, 0, 0);
+                        z-index: 10;
+                    }
+                    img {
+                        margin: 0 auto;
+                    }                    
+                }
+            }
         }
         
+    }
+
+    footer {
+        height: 350px;
+        background-color: #fff;
+        padding: 40px;
+        .footer__parent {
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            div {
+                margin-top: 15px;
+            }
+            .parent__child {
+                text-transform: uppercase;
+                font-size: 28px;
+            }
+            .parent__child__2 {
+                font-size: 18px;
+                font-weight: 900;
+            }
+        }
     }
 }
