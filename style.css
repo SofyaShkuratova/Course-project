@@ -44,7 +44,7 @@ body header nav#nav li {
 body header nav#nav > div:first-child {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 body header nav#nav #menu {
@@ -74,6 +74,29 @@ body header nav#nav #menu > li {
   width: 90px;
 }
 
+body header nav#nav #menu > li a {
+  color: #000;
+  text-decoration: none;
+}
+
+body header nav#nav #menu > li:nth-child(3):hover #drop div {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.199);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+body header nav#nav #menu > li:nth-child(3):hover #drop div li {
+  padding: 6px 0;
+  font-size: 13px;
+  text-transform: none;
+}
+
+body header nav#nav #menu > li:nth-child(3):hover #drop div li a {
+  text-decoration: none;
+  color: black;
+}
+
 body header nav#nav #menu > li > ul#drop {
   overflow: hidden;
   list-style: none;
@@ -81,22 +104,21 @@ body header nav#nav #menu > li > ul#drop {
   padding: 0;
   width: 100%;
   left: 0;
-  top: 80px;
+  top: 30px;
 }
 
 body header nav#nav #menu > li > ul#drop div {
+  display: none;
   padding: 0;
-  -webkit-transform: translate(0, -100%);
-  transform: translate(0, -100%);
-  -webkit-transition: all 0.5s 0.1s;
-  transition: all 0.5s 0.1s;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
+  -webkit-transform: transition(all 0.5s 0.5s);
+          transform: transition(all 0.5s 0.5s);
   position: relative;
 }
 
-body header nav#nav #menu > li > ul#drop li {
-  display: block;
-  padding: 0;
-  background: #747474 !important;
+body header nav#nav #menu > li > ul#drop div li:hover {
+  background-color: rgba(255, 255, 255, 0.37);
 }
 
 body header nav#nav #menu #marker {
@@ -111,19 +133,9 @@ body header nav#nav #menu #marker {
   width: 90px;
 }
 
-body header #menu li:nth-child(1):hover ul#drop div {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
 body header #menu li:nth-child(1):hover ~ #marker {
   -webkit-transform: translate(0px, 0);
   transform: translate(0px, 0);
-}
-
-body header #menu li:nth-child(2):hover ul#drop div {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
 }
 
 body header #menu li:nth-child(2):hover ~ #marker {
@@ -131,19 +143,9 @@ body header #menu li:nth-child(2):hover ~ #marker {
   transform: translate(90px, 0);
 }
 
-body header #menu li:nth-child(3):hover ul#drop div {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
 body header #menu li:nth-child(3):hover ~ #marker {
   -webkit-transform: translate(180px, 0);
   transform: translate(180px, 0);
-}
-
-body header #menu li:nth-child(4):hover ul#drop div {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
 }
 
 body header #menu li:nth-child(4):hover ~ #marker {
@@ -366,9 +368,9 @@ body main section.section__fifth div.parent {
   max-width: 1350px;
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (450px)[3]; */
+  -ms-grid-columns: (450px)[3];
       grid-template-columns: repeat(3, 450px);
-  /* -ms-grid-rows: (500px)[3]; */
+  -ms-grid-rows: (500px)[3];
       grid-template-rows: repeat(3, 500px);
   gap: 10px;
   border: 10px solid #fff;

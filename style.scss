@@ -51,13 +51,12 @@ body {
             >div:first-child {
                 font-family: 'Josefin Sans', sans-serif;
                 font-size: 21px;
-                font-weight: 400;
+                font-weight: 500;
                 
             }
 
             #menu {
             text-align: center;    
-            // list-style-type: none;
             position: relative;
             display: flex;
             flex-direction: row;
@@ -72,6 +71,7 @@ body {
                 
 
                 &>li {
+                    
                     margin: 0;
                     padding: 0 10px 10px;
                     // padding-bottom: 10px;
@@ -80,9 +80,29 @@ body {
                     cursor: pointer;
                     z-index: 5;
                     width: 90px;
-                    // &:not(:first-child) {
-                    //     padding-left: 40px;
-                    // }
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
+
+                    &:nth-child(3):hover {
+                        #drop div {
+                            
+                            display: block;
+                            background-color: rgba(255, 255, 255, 0.199);
+                            transform: translate(0,0);
+                            li {
+                                padding: 6px 0;
+                                font-size: 13px;
+                                text-transform: none;
+                                a{
+                                    text-decoration: none;
+                                    color: rgb(0, 0, 0);
+                                }
+                            }
+                        }
+                    } 
+
                     >ul#drop {
                     overflow: hidden;
                     list-style: none;
@@ -90,18 +110,19 @@ body {
                     padding: 0;
                     width: 100%;
                     left: 0;
-                    top: 80px;
+                    top: 30px;
 
                     div {
+                        
+                        display: none;
+                        
                         padding: 0;
-                        @include transform(translate(0,-100%));
-                        @include transition(all 0.5s 0.1s);
+                        transform: translate(0,-150px);
+                        transform: transition(all 0.5s 0.5s);
                         position: relative;
-                    }
-                    li {
-                        display:block;
-                        padding: 0;
-                        background: #747474 !important;
+                        li:hover {
+                            background-color: rgba(255, 255, 255, 0.37);
+                        }
                     }
                 }
                 }
@@ -124,9 +145,9 @@ body {
 
         @for $i from 1 through 4{
             #menu li:nth-child(#{$i}){
-              &:hover ul#drop div{
-                @include transform(translate(0,0));  
-              }
+            //   &:hover ul#drop div{
+            //     @include transform(translate(0,0));  
+            //   }
               &:hover ~ #marker{
                 @include transform(translate(#{(-1+$i)*90px},0));
               }
