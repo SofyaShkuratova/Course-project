@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir';
+}
+
+@mixin transform($value){
+    -webkit-transform: ($value);
+       -moz-transform: ($value);
+        -ms-transform: ($value);
+            transform: ($value);
+  }
+  @mixin transition($value){
+    -webkit-transition: ($value);
+       -moz-transition: ($value);
+        -ms-transition: ($value);
+            transition: ($value);
+  }
+
+html, body {
+    position: relative;
+    height: 100%;
+    >header,
+    >main,
+    >footer {
+        max-width: 100%;
+        margin: 0 auto;
+        
+        
+    }
+
+    header {
+        max-width: 1240px;
+        margin: 0 auto;
+        
+        nav#nav {
+            li {
+                margin: 0;
+            }
+
+            margin: 0;
+            padding: 30px 0;
+            height: 80px;
+            text-transform: uppercase;
+            background-color: #fff;
+            // padding: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            >div:first-child {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 21px;
+                font-weight: 500;
+            }
+
+            #menu {
+            text-align: center;    
+            position: relative;
+            display: flex;
+            flex-direction: row;
+
+            
+            font-size: 13px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+                
+
+                &>li {
+                    
+                    margin: 0;
+                    padding: 0 10px 10px;
+                    // padding-bottom: 10px;
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    z-index: 5;
+                    width: 90px;
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
+
+                    &:nth-child(3):hover {
+                        #drop div {
+                            
+                            display: block;
+                            background-color: rgba(255, 255, 255, 0.199);
+                            transform: translate(0,0);
+                            li {
+                                padding: 6px 0;
+                                font-size: 13px;
+                                text-transform: none;
+                                a{
+                                    text-decoration: none;
+                                    color: rgb(0, 0, 0);
+                                }
+                            }
+                        }
+                    } 
+
+                    >ul#drop {
+                    overflow: hidden;
+                    list-style: none;
+                    position: absolute;
+                    padding: 0;
+                    width: 100%;
+                    left: 0;
+                    top: 30px;
+
+                    div {
+                        
+                        display: none;
+                        
+                        padding: 0;
+                        transform: translate(0,-150px);
+                        transform: transition(all 0.5s 0.5s);
+                        position: relative;
+                        li:hover {
+                            background-color: rgba(255, 255, 255, 0.37);
+                        }
+                    }
+                }
+                }
+
+                
+
+                #marker {
+                    padding: 0;
+                    height: 5px;
+                    background: #b6b6b6;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 2;
+                    @include transition(all 0.35s);
+                    width: 90px;
+                }
+            
+            } 
+        }
+
+        @for $i from 1 through 4{
+            #menu li:nth-child(#{$i}){
+            //   &:hover ul#drop div{
+            //     @include transform(translate(0,0));  
+            //   }
+              &:hover ~ #marker{
+                @include transform(translate(#{(-1+$i)*90px},0));
+              }
+            }    
+        }
+    }
+       
+}

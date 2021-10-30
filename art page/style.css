@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Avenir';
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+html > header,
+html > main,
+html > footer, body > header,
+body > main,
+body > footer {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+html header, body header {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+html header nav#nav, body header nav#nav {
+  margin: 0;
+  padding: 30px 0;
+  height: 80px;
+  text-transform: uppercase;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html header nav#nav li, body header nav#nav li {
+  margin: 0;
+}
+
+html header nav#nav > div:first-child, body header nav#nav > div:first-child {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+html header nav#nav #menu, body header nav#nav #menu {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html header nav#nav #menu > li, body header nav#nav #menu > li {
+  margin: 0;
+  padding: 0 10px 10px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  width: 90px;
+}
+
+html header nav#nav #menu > li a, body header nav#nav #menu > li a {
+  color: #000;
+  text-decoration: none;
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div, body header nav#nav #menu > li:nth-child(3):hover #drop div {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.199);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div li, body header nav#nav #menu > li:nth-child(3):hover #drop div li {
+  padding: 6px 0;
+  font-size: 13px;
+  text-transform: none;
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div li a, body header nav#nav #menu > li:nth-child(3):hover #drop div li a {
+  text-decoration: none;
+  color: black;
+}
+
+html header nav#nav #menu > li > ul#drop, body header nav#nav #menu > li > ul#drop {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 30px;
+}
+
+html header nav#nav #menu > li > ul#drop div, body header nav#nav #menu > li > ul#drop div {
+  display: none;
+  padding: 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
+  -webkit-transform: transition(all 0.5s 0.5s);
+          transform: transition(all 0.5s 0.5s);
+  position: relative;
+}
+
+html header nav#nav #menu > li > ul#drop div li:hover, body header nav#nav #menu > li > ul#drop div li:hover {
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+html header nav#nav #menu #marker, body header nav#nav #menu #marker {
+  padding: 0;
+  height: 5px;
+  background: #b6b6b6;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  width: 90px;
+}
+
+html header #menu li:nth-child(1):hover ~ #marker, body header #menu li:nth-child(1):hover ~ #marker {
+  -webkit-transform: translate(0px, 0);
+  transform: translate(0px, 0);
+}
+
+html header #menu li:nth-child(2):hover ~ #marker, body header #menu li:nth-child(2):hover ~ #marker {
+  -webkit-transform: translate(90px, 0);
+  transform: translate(90px, 0);
+}
+
+html header #menu li:nth-child(3):hover ~ #marker, body header #menu li:nth-child(3):hover ~ #marker {
+  -webkit-transform: translate(180px, 0);
+  transform: translate(180px, 0);
+}
+
+html header #menu li:nth-child(4):hover ~ #marker, body header #menu li:nth-child(4):hover ~ #marker {
+  -webkit-transform: translate(270px, 0);
+  transform: translate(270px, 0);
+}

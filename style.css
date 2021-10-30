@@ -7,19 +7,26 @@
   font-family: 'Avenir';
 }
 
-body > header,
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+html > header,
+html > main,
+html > footer, body > header,
 body > main,
 body > footer {
   max-width: 100%;
   margin: 0 auto;
 }
 
-body header {
+html header, body header {
   max-width: 1240px;
   margin: 0 auto;
 }
 
-body header nav#nav {
+html header nav#nav, body header nav#nav {
   margin: 0;
   padding: 30px 0;
   height: 80px;
@@ -37,17 +44,17 @@ body header nav#nav {
           justify-content: space-between;
 }
 
-body header nav#nav li {
+html header nav#nav li, body header nav#nav li {
   margin: 0;
 }
 
-body header nav#nav > div:first-child {
+html header nav#nav > div:first-child, body header nav#nav > div:first-child {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 21px;
   font-weight: 500;
 }
 
-body header nav#nav #menu {
+html header nav#nav #menu, body header nav#nav #menu {
   text-align: center;
   position: relative;
   display: -webkit-box;
@@ -64,7 +71,7 @@ body header nav#nav #menu {
   list-style: none;
 }
 
-body header nav#nav #menu > li {
+html header nav#nav #menu > li, body header nav#nav #menu > li {
   margin: 0;
   padding: 0 10px 10px;
   display: inline-block;
@@ -74,30 +81,30 @@ body header nav#nav #menu > li {
   width: 90px;
 }
 
-body header nav#nav #menu > li a {
+html header nav#nav #menu > li a, body header nav#nav #menu > li a {
   color: #000;
   text-decoration: none;
 }
 
-body header nav#nav #menu > li:nth-child(3):hover #drop div {
+html header nav#nav #menu > li:nth-child(3):hover #drop div, body header nav#nav #menu > li:nth-child(3):hover #drop div {
   display: block;
   background-color: rgba(255, 255, 255, 0.199);
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-body header nav#nav #menu > li:nth-child(3):hover #drop div li {
+html header nav#nav #menu > li:nth-child(3):hover #drop div li, body header nav#nav #menu > li:nth-child(3):hover #drop div li {
   padding: 6px 0;
   font-size: 13px;
   text-transform: none;
 }
 
-body header nav#nav #menu > li:nth-child(3):hover #drop div li a {
+html header nav#nav #menu > li:nth-child(3):hover #drop div li a, body header nav#nav #menu > li:nth-child(3):hover #drop div li a {
   text-decoration: none;
   color: black;
 }
 
-body header nav#nav #menu > li > ul#drop {
+html header nav#nav #menu > li > ul#drop, body header nav#nav #menu > li > ul#drop {
   overflow: hidden;
   list-style: none;
   position: absolute;
@@ -107,7 +114,7 @@ body header nav#nav #menu > li > ul#drop {
   top: 30px;
 }
 
-body header nav#nav #menu > li > ul#drop div {
+html header nav#nav #menu > li > ul#drop div, body header nav#nav #menu > li > ul#drop div {
   display: none;
   padding: 0;
   -webkit-transform: translate(0, -150px);
@@ -117,11 +124,11 @@ body header nav#nav #menu > li > ul#drop div {
   position: relative;
 }
 
-body header nav#nav #menu > li > ul#drop div li:hover {
+html header nav#nav #menu > li > ul#drop div li:hover, body header nav#nav #menu > li > ul#drop div li:hover {
   background-color: rgba(255, 255, 255, 0.37);
 }
 
-body header nav#nav #menu #marker {
+html header nav#nav #menu #marker, body header nav#nav #menu #marker {
   padding: 0;
   height: 5px;
   background: #b6b6b6;
@@ -133,42 +140,71 @@ body header nav#nav #menu #marker {
   width: 90px;
 }
 
-body header #menu li:nth-child(1):hover ~ #marker {
+html header #menu li:nth-child(1):hover ~ #marker, body header #menu li:nth-child(1):hover ~ #marker {
   -webkit-transform: translate(0px, 0);
   transform: translate(0px, 0);
 }
 
-body header #menu li:nth-child(2):hover ~ #marker {
+html header #menu li:nth-child(2):hover ~ #marker, body header #menu li:nth-child(2):hover ~ #marker {
   -webkit-transform: translate(90px, 0);
   transform: translate(90px, 0);
 }
 
-body header #menu li:nth-child(3):hover ~ #marker {
+html header #menu li:nth-child(3):hover ~ #marker, body header #menu li:nth-child(3):hover ~ #marker {
   -webkit-transform: translate(180px, 0);
   transform: translate(180px, 0);
 }
 
-body header #menu li:nth-child(4):hover ~ #marker {
+html header #menu li:nth-child(4):hover ~ #marker, body header #menu li:nth-child(4):hover ~ #marker {
   -webkit-transform: translate(270px, 0);
   transform: translate(270px, 0);
 }
 
-body header > section.slider {
-  height: 900px;
-  background: url("img/mainpage/IMG_7241.png");
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 60%;
+html header body, body header body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
-body main {
+html header .swiper, body header .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+html header .swiper-slide, body header .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+html header .swiper-slide img, body header .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html main, body main {
   height: 5700px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(45%, white), color-stop(45%, black), color-stop(90%, black), color-stop(90%, white));
   background: linear-gradient(0deg, white 45%, black 45%, black 90%, white 90%);
 }
 
-body main section.section__first {
+html main section.section__first, body main section.section__first {
   max-width: 1240px;
   margin: 60px auto;
   height: 850px;
@@ -178,7 +214,7 @@ body main section.section__first {
   padding: 79px 715px 500px 125px;
 }
 
-body main section.section__first:hover {
+html main section.section__first:hover, body main section.section__first:hover {
   -webkit-transform: scale(1.009);
           transform: scale(1.009);
   -webkit-box-shadow: 0 0px 30px 2px rgba(0, 0, 0, 0.2);
@@ -187,11 +223,11 @@ body main section.section__first:hover {
   transition: 0.3s ease-in-out;
 }
 
-body main section.section__first article.section__article {
+html main section.section__first article.section__article, body main section.section__first article.section__article {
   color: #fff;
 }
 
-body main section.section__first article.section__article h4 {
+html main section.section__first article.section__article h4, body main section.section__first article.section__article h4 {
   font-size: 36px;
   font-weight: 400;
   line-height: 46px;
@@ -200,20 +236,20 @@ body main section.section__first article.section__article h4 {
   margin-top: 20px;
 }
 
-body main section.section__first article.section__article > div {
+html main section.section__first article.section__article > div, body main section.section__first article.section__article > div {
   font-size: 16px;
 }
 
-body main section.section__first article.section__article > div:not(:nth-child(2)) {
+html main section.section__first article.section__article > div:not(:nth-child(2)), body main section.section__first article.section__article > div:not(:nth-child(2)) {
   margin-top: 23px;
 }
 
-body main section.section__first article.section__article > div.section__article__pararaph {
+html main section.section__first article.section__article > div.section__article__pararaph, body main section.section__first article.section__article > div.section__article__pararaph {
   font-size: 14px;
   line-height: 19px;
 }
 
-body main section.section__text {
+html main section.section__text, body main section.section__text {
   max-width: 1400px;
   height: 350px;
   display: -webkit-box;
@@ -230,16 +266,16 @@ body main section.section__text {
   color: #fff;
 }
 
-body main section.section__text div {
+html main section.section__text div, body main section.section__text div {
   width: 350px;
   margin: 80px 0;
 }
 
-body main section.section__text div *:not(:nth-child(1)) {
+html main section.section__text div *:not(:nth-child(1)), body main section.section__text div *:not(:nth-child(1)) {
   padding-top: 35px;
 }
 
-body main section.section__second {
+html main section.section__second, body main section.section__second {
   height: 750px;
   max-width: 1240px;
   background-color: #28454B;
@@ -249,7 +285,7 @@ body main section.section__second {
   text-align: right;
 }
 
-body main section.section__second .section__second__div {
+html main section.section__second .section__second__div, body main section.section__second .section__second__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,37 +294,37 @@ body main section.section__second .section__second__div {
           justify-content: space-between;
 }
 
-body main section.section__second .section__second__div div.section__second__div_first {
+html main section.section__second .section__second__div div.section__second__div_first, body main section.section__second .section__second__div div.section__second__div_first {
   margin-right: 50px;
 }
 
-body main section.section__second .section__second__div h4 {
+html main section.section__second .section__second__div h4, body main section.section__second .section__second__div h4 {
   font-size: 36px;
   font-weight: 400;
   line-height: 46px;
   margin-top: 300px;
 }
 
-body main section.section__second .section__second__div div div {
+html main section.section__second .section__second__div div div, body main section.section__second .section__second__div div div {
   font-size: 16px;
 }
 
-body main section.section__second .section__second__div div div:not(:nth-child(2)) {
+html main section.section__second .section__second__div div div:not(:nth-child(2)), body main section.section__second .section__second__div div div:not(:nth-child(2)) {
   margin-top: 23px;
 }
 
-body main section.section__second .section__second__div div div.section__article__pararaph {
+html main section.section__second .section__second__div div div.section__article__pararaph, body main section.section__second .section__second__div div div.section__article__pararaph {
   font-size: 14px;
   line-height: 19px;
 }
 
-body main section.section__third {
+html main section.section__third, body main section.section__third {
   max-width: 1400px;
   height: 820px;
   margin: 0 auto;
 }
 
-body main section.section__third div.section__third__container {
+html main section.section__third div.section__third__container, body main section.section__third div.section__third__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,32 +333,32 @@ body main section.section__third div.section__third__container {
           justify-content: flex-start;
 }
 
-body main section.section__third div.section__third__container__second {
+html main section.section__third div.section__third__container__second, body main section.section__third div.section__third__container__second {
   color: #fff;
   margin-left: 50px;
   width: 400px;
 }
 
-body main section.section__third div.section__third__container__second div {
+html main section.section__third div.section__third__container__second div, body main section.section__third div.section__third__container__second div {
   font-size: 16px;
 }
 
-body main section.section__third div.section__third__container__second div:not(:nth-child(2)) {
+html main section.section__third div.section__third__container__second div:not(:nth-child(2)), body main section.section__third div.section__third__container__second div:not(:nth-child(2)) {
   margin-top: 23px;
 }
 
-body main section.section__third div.section__third__container__second h4 {
+html main section.section__third div.section__third__container__second h4, body main section.section__third div.section__third__container__second h4 {
   font-size: 36px;
   font-weight: 400;
   line-height: 46px;
   margin-top: 350px;
 }
 
-body main section.section__third div.section__third__container__second .section__article__pararaph {
+html main section.section__third div.section__third__container__second .section__article__pararaph, body main section.section__third div.section__third__container__second .section__article__pararaph {
   font-size: 14px;
 }
 
-body main section.section__fourth {
+html main section.section__fourth, body main section.section__fourth {
   max-width: 1240px;
   margin: 100px auto 50px;
   height: 780px;
@@ -332,30 +368,30 @@ body main section.section__fourth {
   padding: 79px 715px 500px 125px;
 }
 
-body main section.section__fourth article.section__fourth__container {
+html main section.section__fourth article.section__fourth__container, body main section.section__fourth article.section__fourth__container {
   color: #fff;
   width: 500px;
 }
 
-body main section.section__fourth article.section__fourth__container div {
+html main section.section__fourth article.section__fourth__container div, body main section.section__fourth article.section__fourth__container div {
   font-size: 16px;
 }
 
-body main section.section__fourth article.section__fourth__container div:not(:nth-child(2)) {
+html main section.section__fourth article.section__fourth__container div:not(:nth-child(2)), body main section.section__fourth article.section__fourth__container div:not(:nth-child(2)) {
   margin-top: 23px;
 }
 
-body main section.section__fourth article.section__fourth__container h4 {
+html main section.section__fourth article.section__fourth__container h4, body main section.section__fourth article.section__fourth__container h4 {
   font-size: 36px;
   font-weight: 400;
   line-height: 46px;
 }
 
-body main section.section__fourth article.section__fourth__container .section__article__pararaph {
+html main section.section__fourth article.section__fourth__container .section__article__pararaph, body main section.section__fourth article.section__fourth__container .section__article__pararaph {
   font-size: 14px;
 }
 
-body main section.section__fifth h2 {
+html main section.section__fifth h2, body main section.section__fifth h2 {
   font-family: Avenir;
   font-size: 60px;
   font-weight: 800px;
@@ -364,7 +400,7 @@ body main section.section__fifth h2 {
   margin-bottom: 50px;
 }
 
-body main section.section__fifth div.parent {
+html main section.section__fifth div.parent, body main section.section__fifth div.parent {
   max-width: 1350px;
   display: -ms-grid;
   display: grid;
@@ -376,28 +412,28 @@ body main section.section__fifth div.parent {
   border: 10px solid #fff;
 }
 
-body main section.section__fifth div.parent div.child img:hover {
+html main section.section__fifth div.parent div.child img:hover, body main section.section__fifth div.parent div.child img:hover {
   opacity: 0.5;
   -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
 }
 
-body main section.section__fifth div.parent .child {
+html main section.section__fifth div.parent .child, body main section.section__fifth div.parent .child {
   background-color: black;
   z-index: 10;
 }
 
-body main section.section__fifth div.parent img {
+html main section.section__fifth div.parent img, body main section.section__fifth div.parent img {
   margin: 0 auto;
 }
 
-body footer {
+html footer, body footer {
   height: 350px;
   background-color: #fff;
   padding: 40px;
 }
 
-body footer .footer__parent {
+html footer .footer__parent, body footer .footer__parent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,16 +446,16 @@ body footer .footer__parent {
           align-items: center;
 }
 
-body footer .footer__parent div {
+html footer .footer__parent div, body footer .footer__parent div {
   margin-top: 15px;
 }
 
-body footer .footer__parent .parent__child {
+html footer .footer__parent .parent__child, body footer .footer__parent .parent__child {
   text-transform: uppercase;
   font-size: 28px;
 }
 
-body footer .footer__parent .parent__child__2 {
+html footer .footer__parent .parent__child__2, body footer .footer__parent .parent__child__2 {
   font-size: 18px;
   font-weight: 900;
 }
