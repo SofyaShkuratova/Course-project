@@ -155,6 +155,46 @@ html, body {
               }
             }    
         }
+        
+        h2 {
+            font-family: 'Avenir';
+            text-transform: uppercase;
+            font-size: 48px;
+            font-weight: 500;
+            margin: 50px 600px;
+        }
+    section.container {
+        // padding: 50px 85px ;
+        >div.container__div {
+            display: flex;
+            justify-content: space-between;
+
+            > div.first {
+                background-color: #000;
+                height: 818px;
+                & img {
+                    transform: scale(1.0);
+                    transition:all 0.3s ease-out ;
+                }
+                & img:hover {
+                    // opacity: 0.5;
+                    transform: scale(1.005);
+                    transition:all 0.3s ease-out ;
+                    box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
+                }
+            }
+
+            div h3 {
+                font-weight: 300;
+                font-size: 40px;
+                // text-transform: uppercase;
+                color: #FF8D8D;
+                margin-top: 400px;
+                margin-right: 85px;
+                
+            }
+
+        }
+    }      
     }
-       
 }

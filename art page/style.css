@@ -159,3 +159,49 @@ html header #menu li:nth-child(4):hover ~ #marker, body header #menu li:nth-chil
   -webkit-transform: translate(270px, 0);
   transform: translate(270px, 0);
 }
+
+html header h2, body header h2 {
+  font-family: 'Avenir';
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 50px 600px;
+}
+
+html header section.container > div.container__div, body header section.container > div.container__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html header section.container > div.container__div > div.first, body header section.container > div.container__div > div.first {
+  background-color: #000;
+  height: 818px;
+}
+
+html header section.container > div.container__div > div.first img, body header section.container > div.container__div > div.first img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+html header section.container > div.container__div > div.first img:hover, body header section.container > div.container__div > div.first img:hover {
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
+          box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
+}
+
+html header section.container > div.container__div div h3, body header section.container > div.container__div div h3 {
+  font-weight: 300;
+  font-size: 40px;
+  color: #FF8D8D;
+  margin-top: 400px;
+  margin-right: 85px;
+}
