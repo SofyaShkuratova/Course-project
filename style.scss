@@ -26,21 +26,19 @@ html, body {
     >header,
     >main,
     >footer {
-        max-width: 100%;
-        margin: 0 auto;
-        
-        
+        // max-width: 100%;
+        margin: 0 auto;  
     }
 
     header {
-        max-width: 1240px;
-        margin: 0 auto;
+        max-width: 1400px;
         
         nav#nav {
             li {
                 margin: 0;
             }
-            margin: 0;
+            max-width: 1240px;
+            margin: 0 auto;
             padding: 30px 0;
             height: 80px;
             text-transform: uppercase;
@@ -157,20 +155,14 @@ html, body {
           }
 
         >section.slider {
-            
+            max-width: 1400px;
             height: 900px;
-            // background: url('img/mainpage/IMG_7241.png');
-            // position: relative;
+            background: url('img/mainpage/IMG_7241.png');
+            position: relative;
             background-repeat: no-repeat;
             background-size: cover;
             background-position-y: 60% ;
             }
-        
-    //     html,
-    //     body {
-    //         position: relative;
-    //         height: 100%;
-    //   }
 
       body {
         background: #eee;
@@ -179,38 +171,6 @@ html, body {
         color: #000;
         margin: 0;
         padding: 0;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
     }
 
@@ -460,4 +420,4 @@ html, body {
             }
         }
     }
-}
+    }

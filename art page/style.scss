@@ -165,16 +165,19 @@ html, body {
         }
     section.container {
         // padding: 50px 85px ;
+        height: 100px;
         >div.container__div {
             display: flex;
             justify-content: space-between;
+            height: 700px;
 
             > div.first {
                 background-color: #000;
-                height: 818px;
+                
                 & img {
                     transform: scale(1.0);
                     transition:all 0.3s ease-out ;
+                    height: 700px;
                 }
                 & img:hover {
                     // opacity: 0.5;
@@ -189,7 +192,7 @@ html, body {
                 font-size: 40px;
                 // text-transform: uppercase;
                 color: #FF8D8D;
-                margin-top: 400px;
+                margin-top: 350px;
                 margin-right: 85px;
                 
             }

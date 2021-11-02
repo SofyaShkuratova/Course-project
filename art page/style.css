@@ -168,6 +168,10 @@ html header h2, body header h2 {
   margin: 50px 600px;
 }
 
+html header section.container, body header section.container {
+  height: 100px;
+}
+
 html header section.container > div.container__div, body header section.container > div.container__div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,11 +179,11 @@ html header section.container > div.container__div, body header section.containe
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 700px;
 }
 
 html header section.container > div.container__div > div.first, body header section.container > div.container__div > div.first {
   background-color: #000;
-  height: 818px;
 }
 
 html header section.container > div.container__div > div.first img, body header section.container > div.container__div > div.first img {
@@ -187,6 +191,7 @@ html header section.container > div.container__div > div.first img, body header 
           transform: scale(1);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  height: 700px;
 }
 
 html header section.container > div.container__div > div.first img:hover, body header section.container > div.container__div > div.first img:hover {
@@ -202,6 +207,6 @@ html header section.container > div.container__div div h3, body header section.c
   font-weight: 300;
   font-size: 40px;
   color: #FF8D8D;
-  margin-top: 400px;
+  margin-top: 350px;
   margin-right: 85px;
 }
