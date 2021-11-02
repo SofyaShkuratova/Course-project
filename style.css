@@ -163,10 +163,10 @@ html header > section.slider, body header > section.slider {
   max-width: 1400px;
   height: 900px;
   background: url("img/mainpage/IMG_7241.png");
+  background-attachment: fixed;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 60%;
 }
 
 html header body, body header body {

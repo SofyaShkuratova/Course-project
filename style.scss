@@ -158,10 +158,11 @@ html, body {
             max-width: 1400px;
             height: 900px;
             background: url('img/mainpage/IMG_7241.png');
+            background-attachment: fixed;
             position: relative;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position-y: 60% ;
+            // background-position-y: 60% ;
             }
 
       body {
@@ -173,6 +174,120 @@ html, body {
         padding: 0;
       }
     }
+
+    // @media only screen 
+    // and (min-device-width: 320px) 
+    // and (max-device-width: 736px) {
+    //     nav#nav {
+    //         li {
+    //             margin: 0;
+    //         }
+    //         // max-width: 1240px;
+    //         margin: 0 auto;
+    //         padding: 30px 0;
+    //         height: 92px;
+    //         text-transform: uppercase;
+    //         background-color: #fff;
+    //         // padding: 30px;
+    //         display: flex;
+    //         flex-direction: row;
+    //         justify-content: space-between;
+
+    //         >div:first-child {
+    //             font-family: 'Josefin Sans', sans-serif;
+    //             font-size: 21px;
+    //             font-weight: 500;
+                
+    //         }
+
+    //         #menu {
+    //         text-align: center;    
+    //         position: relative;
+    //         display: flex;
+    //         flex-direction: row;
+
+            
+    //         font-size: 13px;
+    //         font-weight: 400;
+    //         padding: 0;
+    //         margin: 0;
+    //         list-style: none;
+            
+                
+
+    //             &>li {
+                    
+    //                 margin: 0;
+    //                 padding: 0 10px 10px;
+    //                 // padding-bottom: 10px;
+    //                 display: inline-block;
+    //                 position: relative;
+    //                 cursor: pointer;
+    //                 z-index: 5;
+    //                 width: 90px;
+    //                 a {
+    //                     color: #000;
+    //                     text-decoration: none;
+    //                 }
+
+    //                 &:nth-child(3):hover {
+    //                     #drop div {
+                            
+    //                         display: block;
+    //                         background-color: rgba(255, 255, 255, 0.199);
+    //                         transform: translate(0,0);
+    //                         li {
+    //                             padding: 6px 0;
+    //                             font-size: 13px;
+    //                             text-transform: none;
+    //                             a{
+    //                                 text-decoration: none;
+    //                                 color: rgb(0, 0, 0);
+    //                             }
+    //                         }
+    //                     }
+    //                 } 
+
+    //                 >ul#drop {
+    //                 overflow: hidden;
+    //                 list-style: none;
+    //                 position: absolute;
+    //                 padding: 0;
+    //                 width: 100%;
+    //                 left: 0;
+    //                 top: 30px;
+
+    //                 div {
+                        
+    //                     display: none;
+                        
+    //                     padding: 0;
+    //                     transform: translate(0,-150px);
+    //                     transform: transition(all 0.5s 0.5s);
+    //                     position: relative;
+    //                     li:hover {
+    //                         background-color: rgba(255, 255, 255, 0.37);
+    //                     }
+    //                 }
+    //             }
+    //             }
+
+                
+
+    //             #marker {
+    //                 padding: 0;
+    //                 height: 5px;
+    //                 background: #b6b6b6;
+    //                 position: absolute;
+    //                 bottom: 0;
+    //                 z-index: 2;
+    //                 @include transition(all 0.35s);
+    //                 width: 90px;
+    //             }
+            
+    //         } 
+    //     }
+    // }
 
     main {
         // max-width: 100%;
