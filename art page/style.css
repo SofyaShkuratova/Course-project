@@ -160,53 +160,183 @@ html header #menu li:nth-child(4):hover ~ #marker, body header #menu li:nth-chil
   transform: translate(270px, 0);
 }
 
-html header h2, body header h2 {
+html h2, body h2 {
+  display: block;
   font-family: 'Avenir';
   text-transform: uppercase;
   font-size: 48px;
   font-weight: 500;
-  margin: 50px 600px;
+  margin: 50px 700px;
 }
 
-html header section.container, body header section.container {
-  height: 100px;
+html main section.container, body main section.container {
+  height: 800px;
 }
 
-html header section.container > div.container__div, body header section.container > div.container__div {
+html main section.container div.container__div, body main section.container div.container__div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 700px;
+  height: 800px;
 }
 
-html header section.container > div.container__div > div.first, body header section.container > div.container__div > div.first {
-  background-color: #000;
+html main section.container div.container__div div.one, body main section.container div.container__div div.one {
+  background-color: #FDF1EE;
+  width: 50%;
+  height: 800px;
+  position: relative;
 }
 
-html header section.container > div.container__div > div.first img, body header section.container > div.container__div > div.first img {
+html main section.container div.container__div div.one > div.first, body main section.container div.container__div div.one > div.first {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html main section.container div.container__div div.one > div.first img, body main section.container div.container__div div.one > div.first img {
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  height: 700px;
 }
 
-html header section.container > div.container__div > div.first img:hover, body header section.container > div.container__div > div.first img:hover {
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  -webkit-box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
-          box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
+html main section.container div.container__div div.one > div.first img:hover, body main section.container div.container__div div.one > div.first img:hover {
+  -webkit-transform: scale(1.007);
+          transform: scale(1.007);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-html header section.container > div.container__div div h3, body header section.container > div.container__div div h3 {
+html main section.container div.container__div div.two, body main section.container div.container__div div.two {
+  width: 50%;
+  height: 800px;
+  position: relative;
+}
+
+html main section.container div.container__div div.two div.container__second, body main section.container div.container__div div.two div.container__second {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html main section.container div.container__div div.two div.container__second h3 a, body main section.container div.container__div div.two div.container__second h3 a {
+  display: block;
   font-weight: 300;
   font-size: 40px;
+  text-transform: uppercase;
   color: #FF8D8D;
-  margin-top: 350px;
-  margin-right: 85px;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+}
+
+html main section.container div.container__div div.two div.container__second h3 a:nth-child(2), body main section.container div.container__div div.two div.container__second h3 a:nth-child(2) {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: none;
+  line-height: 30px;
+}
+
+html main section.container div.container__div div.two div.container__second h3 a:hover, body main section.container div.container__div div.two div.container__second h3 a:hover {
+  cursor: pointer;
+}
+
+html main section.container__second, body main section.container__second {
+  height: 800px;
+}
+
+html main section.container__second > div.container__div, body main section.container__second > div.container__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 800px;
+}
+
+html main section.container__second > div.container__div > div.two, body main section.container__second > div.container__div > div.two {
+  width: 50%;
+  height: 800px;
+  position: relative;
+}
+
+html main section.container__second > div.container__div > div.two div.container__second, body main section.container__second > div.container__div > div.two div.container__second {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html main section.container__second > div.container__div > div.two div.container__second h3 a, body main section.container__second > div.container__div > div.two div.container__second h3 a {
+  display: block;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #87923B;
+  text-decoration: none;
+  line-height: 55px;
+  letter-spacing: 0.07em;
+}
+
+html main section.container__second > div.container__div > div.two div.container__second h3 a:nth-child(2), body main section.container__second > div.container__div > div.two div.container__second h3 a:nth-child(2) {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: none;
+  line-height: 30px;
+}
+
+html main section.container__second > div.container__div > div.two div.container__second h3 a:hover, body main section.container__second > div.container__div > div.two div.container__second h3 a:hover {
+  cursor: pointer;
+}
+
+html main section.container__second > div.container__div div.one, body main section.container__second > div.container__div div.one {
+  width: 50%;
+  position: relative;
+  background-color: #F4F0C3;
+}
+
+html main section.container__second > div.container__div div.one > div.first, body main section.container__second > div.container__div div.one > div.first {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html main section.container__second > div.container__div div.one > div.first img, body main section.container__second > div.container__div div.one > div.first img {
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+html main section.container__second > div.container__div div.one > div.first img:hover, body main section.container__second > div.container__div div.one > div.first img:hover {
+  -webkit-transform: scale(1.007);
+          transform: scale(1.007);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+html main section.container #third > div.container__div div.one, body main section.container #third > div.container__div div.one {
+  background-color: #A3767C;
+}
+
+html main section.container #third > div.container__div > div.two div.container__second h3 a, body main section.container #third > div.container__div > div.two div.container__second h3 a {
+  color: #551515;
 }

@@ -7,7 +7,7 @@
     font-family: 'Avenir';
 }
 
-@mixin transform($value){
+ @mixin transform($value){
     -webkit-transform: ($value);
        -moz-transform: ($value);
         -ms-transform: ($value);
@@ -40,7 +40,6 @@ html, body {
             li {
                 margin: 0;
             }
-
             margin: 0;
             padding: 30px 0;
             height: 80px;
@@ -155,49 +154,183 @@ html, body {
               }
             }    
         }
-        
+    }
         h2 {
+            display: block;
             font-family: 'Avenir';
             text-transform: uppercase;
             font-size: 48px;
             font-weight: 500;
-            margin: 50px 600px;
+            margin: 50px 700px;
         }
-    section.container {
-        // padding: 50px 85px ;
-        height: 100px;
-        >div.container__div {
-            display: flex;
-            justify-content: space-between;
-            height: 700px;
 
-            > div.first {
-                background-color: #000;
+    main {
+        section.container {
+        height: 800px;
+
+        div.container__div {
+            display: flex;
+            // justify-content:space-between;
+            height: 800px;
+
+            div.one {
+                background-color: #FDF1EE;
+                width: 50%;
+                height: 800px;
+                position: relative;
+
+               > div.first {
+
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 
                 & img {
+                    width: 90%;
+                    align-items: center;
                     transform: scale(1.0);
                     transition:all 0.3s ease-out ;
-                    height: 700px;
                 }
                 & img:hover {
-                    // opacity: 0.5;
-                    transform: scale(1.005);
-                    transition:all 0.3s ease-out ;
-                    box-shadow: 0 0 15px 5px rgba(54, 54, 54, 0.295);
+                    transform: scale(1.007);
+                    transition: all 250ms ease ;
+                    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.20);
                 }
+            } 
             }
 
-            div h3 {
-                font-weight: 300;
-                font-size: 40px;
-                // text-transform: uppercase;
-                color: #FF8D8D;
-                margin-top: 350px;
-                margin-right: 85px;
+            
+            div.two {
+                width: 50%;
+                height: 800px;
+                position: relative;
+                div.container__second {
+                    top: 50%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    h3 {
+                        a {
+                            display: block;
+                            font-weight: 300;
+                            font-size: 40px;
+                            text-transform: uppercase;
+                            color: #FF8D8D;
+                            text-decoration: none;
+                            letter-spacing: 0.07em;
+                        }
+                        a:nth-child(2){
+                            font-size: 20px;
+                            font-weight: 300;
+                            text-transform: none;
+                            line-height: 30px;
+                        }
+                        a:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
                 
             }
-
         }
-    }      
+        } 
+
+        section.container__second {    
+            height: 800px;
+
+            >div.container__div {
+                display: flex;
+                height: 800px;
+    
+                > div.two {
+                    width: 50%;
+                    height: 800px;
+                    position: relative;
+                    div.container__second {
+                        top: 50%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        h3 {
+                            a {
+                                display: block;
+                                font-weight: 300;
+                                font-size: 40px;
+                                text-transform: uppercase;
+                                color: #87923B;
+                                text-decoration: none;
+                                line-height: 55px;
+                                letter-spacing: 0.07em;
+                            }
+                            a:nth-child(2){
+                                font-size: 20px;
+                                font-weight: 300;
+                                text-transform: none;
+                                line-height: 30px;
+                            }
+                            a:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                }
+    
+                div.one {
+                    width: 50%;
+                    position: relative;
+                    background-color: #F4F0C3;
+
+                > div.first {
+
+                    margin: 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                    & img {
+                        width: 90%;
+                        align-items: center;
+                        transform: scale(1.0);
+                        transition:all 0.3s ease-out ;
+                    }
+                    & img:hover {
+                        transform: scale(1.007);
+                        transition: all 250ms ease ;
+                        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.20);
+                    }
+                        
+                    }
+                }
+    
+            }
+        }
+        
+        section.container  {
+            #third {
+                >div.container__div {
+                
+                div.one {
+                    background-color: #A3767C;
+                }
+                >div.two {
+                    div.container__second {
+                        h3 {
+                            a {
+                                color: #551515;
+                            }
+                            
+                        }
+                    }
+                    
+                }
+            }
+            }
+        
+        } 
+
     }
 }
