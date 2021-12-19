@@ -340,3 +340,11 @@ html main section.container #third > div.container__div div.one, body main secti
 html main section.container #third > div.container__div > div.two div.container__second h3 a, body main section.container #third > div.container__div > div.two div.container__second h3 a {
   color: #551515;
 }
+
+html main section.container #fourth > div.container__div div.one, body main section.container #fourth > div.container__div div.one {
+  background-color: #A3767C;
+}
+
+html main section.container #fourth > div.container__div > div.two div.container__second h3 a, body main section.container #fourth > div.container__div > div.two div.container__second h3 a {
+  color: #551515;
+}

@@ -1,22 +1,20 @@
-// let swiper = new Swiper(".mySwiper", {
-//     spaceBetween: 30,
-//     centeredSlides: true,
-//     autoplay: {
-//       delay: 2500,
-//       disableOnInteraction: false,
-//     },
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//   });
+var counter = 1;
+setInterval(function(){
+    document.getElementById(`radio` + counter).checked = true;
+    counter++;
+    if(counter > 4) {
+        counter = 1;
+    }
+}, 5000);
 
-//   document.addEventListener('DOMContentLoaded', function () {
-//     const slider = new ChiefSlider('.slider', {
-//       loop: true
-//     });
-//   });
+const menu = document.querySelector(`#mobile-menu`);
+const menuLinks = document.querySelector(`.navbar__menu`);
+
+// Display Mobile Menu
+const mobileMenu = () => {
+    menu.classList.toggle(`is-active`)
+    menuLinks.classList.toggle(`active`)
+}
+
+menu.addEventListener(`click`, mobileMenu);
+

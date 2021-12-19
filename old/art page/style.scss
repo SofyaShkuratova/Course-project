@@ -311,7 +311,29 @@ html, body {
         
         section.container  {
             #third {
-                >div.container__div {
+                    >div.container__div {
+                
+                div.one {
+                    background-color: #A3767C;
+                }
+                >div.two {
+                    div.container__second {
+                        h3 {
+                            a {
+                                color: #551515;
+                            }
+                            
+                        }
+                    }
+                    
+                }
+            }
+            }
+        } 
+
+        section.container  {
+            #fourth {
+                    >div.container__div {
                 
                 div.one {
                     background-color: #A3767C;

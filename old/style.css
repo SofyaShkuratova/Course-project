@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Avenir';
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+html > header,
+html > main,
+html > footer, body > header,
+body > main,
+body > footer {
+  margin: 0 auto;
+}
+
+html header, body header {
+  max-width: 1400px;
+}
+
+html header nav#nav, body header nav#nav {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 0;
+  height: 80px;
+  text-transform: uppercase;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html header nav#nav li, body header nav#nav li {
+  margin: 0;
+}
+
+html header nav#nav > div:first-child, body header nav#nav > div:first-child {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+html header nav#nav #menu, body header nav#nav #menu {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html header nav#nav #menu > li, body header nav#nav #menu > li {
+  margin: 0;
+  padding: 0 10px 10px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  width: 90px;
+}
+
+html header nav#nav #menu > li a, body header nav#nav #menu > li a {
+  color: #000;
+  text-decoration: none;
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div, body header nav#nav #menu > li:nth-child(3):hover #drop div {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.199);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div li, body header nav#nav #menu > li:nth-child(3):hover #drop div li {
+  padding: 6px 0;
+  font-size: 13px;
+  text-transform: none;
+}
+
+html header nav#nav #menu > li:nth-child(3):hover #drop div li a, body header nav#nav #menu > li:nth-child(3):hover #drop div li a {
+  text-decoration: none;
+  color: black;
+}
+
+html header nav#nav #menu > li > ul#drop, body header nav#nav #menu > li > ul#drop {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 30px;
+}
+
+html header nav#nav #menu > li > ul#drop div, body header nav#nav #menu > li > ul#drop div {
+  display: none;
+  padding: 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
+  -webkit-transform: transition(all 0.5s 0.5s);
+          transform: transition(all 0.5s 0.5s);
+  position: relative;
+}
+
+html header nav#nav #menu > li > ul#drop div li:hover, body header nav#nav #menu > li > ul#drop div li:hover {
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+html header nav#nav #menu #marker, body header nav#nav #menu #marker {
+  padding: 0;
+  height: 5px;
+  background: #b6b6b6;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  width: 90px;
+}
+
+html header #menu li:nth-child(1):hover ~ #marker, body header #menu li:nth-child(1):hover ~ #marker {
+  -webkit-transform: translate(0px, 0);
+  transform: translate(0px, 0);
+}
+
+html header #menu li:nth-child(2):hover ~ #marker, body header #menu li:nth-child(2):hover ~ #marker {
+  -webkit-transform: translate(90px, 0);
+  transform: translate(90px, 0);
+}
+
+html header #menu li:nth-child(3):hover ~ #marker, body header #menu li:nth-child(3):hover ~ #marker {
+  -webkit-transform: translate(180px, 0);
+  transform: translate(180px, 0);
+}
+
+html header #menu li:nth-child(4):hover ~ #marker, body header #menu li:nth-child(4):hover ~ #marker {
+  -webkit-transform: translate(270px, 0);
+  transform: translate(270px, 0);
+}
+
+html header > section.slider, body header > section.slider {
+  max-width: 1400px;
+  height: 900px;
+  background: url("img/mainpage/IMG_7241.png");
+  background-attachment: fixed;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html header body, body header body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html main, body main {
+  height: 5700px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(45%, #838080), color-stop(45%, #111111), color-stop(90%, black), color-stop(90%, white));
+  background: linear-gradient(0deg, #838080 45%, #111111 45%, black 90%, white 90%);
+}
+
+html main section.section__first, body main section.section__first {
+  max-width: 1240px;
+  margin: 60px auto;
+  height: 850px;
+  background: url("img/mainpage/IMG_17001.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 79px 715px 500px 125px;
+}
+
+html main section.section__first:hover, body main section.section__first:hover {
+  -webkit-transform: scale(1.009);
+          transform: scale(1.009);
+  -webkit-box-shadow: 0 0px 30px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 30px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+html main section.section__first article.section__article, body main section.section__first article.section__article {
+  color: #fff;
+}
+
+html main section.section__first article.section__article h4, body main section.section__first article.section__article h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  width: 430px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+html main section.section__first article.section__article > div, body main section.section__first article.section__article > div {
+  font-size: 16px;
+}
+
+html main section.section__first article.section__article > div:not(:nth-child(2)), body main section.section__first article.section__article > div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+html main section.section__first article.section__article > div.section__article__pararaph, body main section.section__first article.section__article > div.section__article__pararaph {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+html main section.section__text, body main section.section__text {
+  position: relative;
+  height: 400px;
+}
+
+html main section.section__text div.container, body main section.section__text div.container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+  height: 400px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html main section.section__text div.container div, body main section.section__text div.container div {
+  width: 350px;
+  margin: 80px 80px;
+  height: 400px;
+}
+
+html main section.section__text div.container div *:not(:nth-child(1)), body main section.section__text div.container div *:not(:nth-child(1)) {
+  padding-top: 35px;
+}
+
+html main section.section__second, body main section.section__second {
+  height: 750px;
+  max-width: 1000px;
+  background-color: #28454B;
+  margin: 80px auto;
+  padding: 40px 93px 60px 200px;
+  color: #fff;
+  text-align: right;
+}
+
+html main section.section__second .section__second__div, body main section.section__second .section__second__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html main section.section__second .section__second__div div.section__second__div_first, body main section.section__second .section__second__div div.section__second__div_first {
+  margin-right: 50px;
+  width: 500px;
+}
+
+html main section.section__second .section__second__div h4, body main section.section__second .section__second__div h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  margin-top: 300px;
+}
+
+html main section.section__second .section__second__div div div, body main section.section__second .section__second__div div div {
+  font-size: 16px;
+}
+
+html main section.section__second .section__second__div div div:not(:nth-child(2)), body main section.section__second .section__second__div div div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+html main section.section__second .section__second__div div div.section__article__pararaph, body main section.section__second .section__second__div div div.section__article__pararaph {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+html main section.section__third, body main section.section__third {
+  max-width: 1400px;
+  height: 820px;
+  margin: 0 auto;
+}
+
+html main section.section__third div.section__third__container, body main section.section__third div.section__third__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+html main section.section__third div.section__third__container__second, body main section.section__third div.section__third__container__second {
+  color: #fff;
+  margin-left: 50px;
+  width: 400px;
+}
+
+html main section.section__third div.section__third__container__second div, body main section.section__third div.section__third__container__second div {
+  font-size: 16px;
+}
+
+html main section.section__third div.section__third__container__second div:not(:nth-child(2)), body main section.section__third div.section__third__container__second div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+html main section.section__third div.section__third__container__second h4, body main section.section__third div.section__third__container__second h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  margin-top: 350px;
+}
+
+html main section.section__third div.section__third__container__second .section__article__pararaph, body main section.section__third div.section__third__container__second .section__article__pararaph {
+  font-size: 14px;
+}
+
+html main section.section__fourth, body main section.section__fourth {
+  max-width: 1240px;
+  margin: 100px auto 50px;
+  height: 780px;
+  background: url("img/mainpage/IMG_0208.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 79px 715px 500px 125px;
+}
+
+html main section.section__fourth article.section__fourth__container, body main section.section__fourth article.section__fourth__container {
+  color: #fff;
+  width: 500px;
+}
+
+html main section.section__fourth article.section__fourth__container div, body main section.section__fourth article.section__fourth__container div {
+  font-size: 16px;
+}
+
+html main section.section__fourth article.section__fourth__container div:not(:nth-child(2)), body main section.section__fourth article.section__fourth__container div:not(:nth-child(2)) {
+  margin-top: 23px;
+}
+
+html main section.section__fourth article.section__fourth__container h4, body main section.section__fourth article.section__fourth__container h4 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+html main section.section__fourth article.section__fourth__container .section__article__pararaph, body main section.section__fourth article.section__fourth__container .section__article__pararaph {
+  font-size: 14px;
+}
+
+html main section.section__fifth h2, body main section.section__fifth h2 {
+  font-family: Avenir;
+  font-size: 60px;
+  font-weight: 800px;
+  text-align: center;
+  display: block;
+  margin-bottom: 50px;
+}
+
+html main section.section__fifth div.parent, body main section.section__fifth div.parent {
+  max-width: 1350px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (450px)[3];
+      grid-template-columns: repeat(3, 450px);
+  -ms-grid-rows: (500px)[3];
+      grid-template-rows: repeat(3, 500px);
+  gap: 10px;
+  border: 10px solid #fff;
+}
+
+html main section.section__fifth div.parent div.child img:hover, body main section.section__fifth div.parent div.child img:hover {
+  opacity: 0.5;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+html main section.section__fifth div.parent .child, body main section.section__fifth div.parent .child {
+  background-color: black;
+  z-index: 10;
+}
+
+html main section.section__fifth div.parent img, body main section.section__fifth div.parent img {
+  margin: 0 auto;
+}
+
+html footer, body footer {
+  height: 350px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+html footer .footer__parent, body footer .footer__parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html footer .footer__parent div, body footer .footer__parent div {
+  margin-top: 15px;
+}
+
+html footer .footer__parent .parent__child, body footer .footer__parent .parent__child {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+html footer .footer__parent .parent__child__2, body footer .footer__parent .parent__child__2 {
+  font-size: 18px;
+  font-weight: 900;
+}
