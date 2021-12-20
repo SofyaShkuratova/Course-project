@@ -48,7 +48,7 @@
             justify-content: space-between;
   }
   html .third#third .third__content .img {
-    background: url("images/mainpage/2.jpg");
+    background-image: url("images/mainpage/2.jpg");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -185,7 +185,7 @@
   }
   html .third#third .third__content .img {
     margin-top: 5%;
-    background: url("images/mainpage/2.jpg");
+    background-image: url("images/mainpage/2.jpg");
     width: 100%;
     height: 100%;
     background-position: center;
@@ -235,7 +235,7 @@ html body main .first {
 
 html body main .first .first__content {
   padding: 10vw;
-  background: url("images/5.jpg");
+  background-image: url("images/5.jpg");
   width: 100%;
   height: 100%;
   background-position: bottom;
@@ -342,7 +342,7 @@ html body main .third .third__content h3 {
 }
 
 html body main .third .third__content .img {
-  background: url("images/mainpage/2.jpg");
+  background-image: url("images/mainpage/2.jpg");
   width: 30%;
   height: 100%;
   background-position: center;
