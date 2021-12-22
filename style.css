@@ -357,11 +357,28 @@ header .navbar__container > .navbar__menu > li.navbar__item > .navbar__links:hov
 @media only screen and (max-width: 450px) {
   body .sixth#sixth {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     background-color: #fff;
     padding: 5vw 8vw;
     margin: 0 0;
     font-size: 0.6rem;
+  }
+  body .sixth#sixth h5 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  body .sixth#sixth {
+    width: 100%;
+    height: 55vh;
+    background-color: #fff;
+    padding: 5vw 8vw;
+    margin: 0 0;
+    font-size: 0.6rem;
+  }
+  body .sixth#sixth h2 {
+    font-size: 2rem;
   }
   body .sixth#sixth h5 {
     font-size: 1rem;
@@ -421,6 +438,15 @@ html body main .first .first__content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html body main .first .first__content:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 html body main .first .first__content span.arrow {
@@ -526,6 +552,15 @@ html body main .third .third__content .img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html body main .third .third__content .img:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 html body main .fourth {
@@ -558,6 +593,15 @@ html body main .fourth .fourth__content .fourth__img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html body main .fourth .fourth__content .fourth__img:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 html body main .fourth .fourth__content .text {
@@ -620,6 +664,15 @@ html body main .fifth .fifth__content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+html body main .fifth .fifth__content:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 html body main .fifth .fifth__content span.arrow {
@@ -1126,6 +1179,38 @@ html body main .sixth div.parent > .child .img9:hover .child {
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+html body footer {
+  width: 100%;
+  height: 60vh;
+  background-color: #fff;
+  padding: 5vw 8vw;
+  margin: 0 0;
+}
+
+html body footer .footer {
+  height: 100%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body footer .footer span {
+  text-align: center;
 }
 
 .slider {

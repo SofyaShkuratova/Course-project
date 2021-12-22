@@ -72,6 +72,17 @@ $font-size-header: 2.5rem;
     align-items: center;
 }
 
+@mixin footer {
+    height: 100%;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 // css navigation
 header {
     div#header__block {
@@ -356,7 +367,23 @@ header {
 @media only screen and (max-width: 450px){
     body {
         .sixth#sixth {
-            @include block($block-height: 60vh);
+            @include block($block-height: 80vh);
+            font-size: 0.6rem;
+            h5 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px){
+    body {
+
+        .sixth#sixth {
+            h2 {
+                font-size: 2rem;
+            }
+            @include block($block-height: 55vh);
             font-size: 0.6rem;
             h5 {
                 font-size: 1rem;
@@ -396,9 +423,13 @@ html {
                     background-size: cover;
                     display: flex;
                     flex-direction: column;
+                    transition: all 0.5s ease-in-out;
                     
-                    // border-radius: 10px;
-                    // justify-content: center;
+                    &:hover {
+                        transition: all 0.5s ease-in-out;
+                        transform: scale(1.03);
+                    }
+
                     span.arrow {
                         margin-top: 9%;
                     }
@@ -453,6 +484,13 @@ html {
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
+
+                        transition: all 0.5s ease-in-out;
+                    
+                        &:hover {
+                            transition: all 0.5s ease-in-out;
+                            transform: scale(1.03);
+                        }
                     }
                     
                 }
@@ -478,6 +516,13 @@ html {
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
+
+                        transition: all 0.5s ease-in-out;
+                    
+                        &:hover {
+                            transition: all 0.5s ease-in-out;
+                            transform: scale(1.03);
+                        }
                     }
 
                     .text {
@@ -510,6 +555,13 @@ html {
                     background-size: cover;
                     display: flex;
                     flex-direction: column;
+
+                    transition: all 0.5s ease-in-out;
+                    
+                    &:hover {
+                        transition: all 0.5s ease-in-out;
+                        transform: scale(1.03);
+                    }
 
                     span.arrow {
                         margin-top: 9%;
@@ -725,6 +777,18 @@ html {
                         }
                     }
                             
+                }
+            }
+        }
+
+        footer {
+            @include block($block-height: 60vh);
+            
+            .footer {
+                @include footer();
+                
+                span {
+                    text-align: center;
                 }
             }
         }
