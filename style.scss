@@ -12,12 +12,12 @@ $min-height: 48rem;
 $font-size: 1.5rem;
 $font-size-header: 2.5rem;
 
-@mixin block ($bg-color: #fff){
+@mixin block ($bg-color: #fff, $block-margin: 0 0, $block-height: 100vh){
     width: 100%;
-    height: $height;
+    height: $block-height;
     background-color: $bg-color;
     padding: 5vw 8vw;
-    margin: 3vw 0;
+    margin: $block-margin;
 }
 
 @mixin header-3-1400 ($h3-size: 40px, $h3-color:#fff, $h3-align: left) {
@@ -33,6 +33,18 @@ $font-size-header: 2.5rem;
     // width: 50%;
 }
 
+@mixin header-5-1400 () {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: $font-stack;
+    text-transform: none;
+    line-height: 24px;
+    margin: 0.5rem 0;
+    
+}
+
 @mixin paragraph ($p-size: 16px, $p-width: 100%, $p-align: left) {
     text-align: $p-align;
     color: #fff;
@@ -43,6 +55,21 @@ $font-size-header: 2.5rem;
     line-height: 20px;
     font-style: normal;
     width: $p-width;
+}
+
+@mixin img-grid {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
 }
 
 // css navigation
@@ -117,6 +144,13 @@ header {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    body {
+        .sixth#sixth {
+            @include block($block-height: 105vh);
+        }
+    }
+}
 
 @media only screen and (max-width: 980px) {
     .slider {
@@ -154,8 +188,43 @@ header {
             background-size: contain;
             background-repeat: no-repeat;
         }
-        
         }
+
+        .fourth#fourth .fourth__content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: no-wrap;
+
+            background-color: #000000;
+
+            .text {
+                padding: 5% 0;
+                width: 75%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            .fourth__img {
+                background-image: url('images/mainpage/3.jpg');
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        
+        .sixth#sixth {
+                @include block($block-height: 80vh);
+        }
+        
     }
 
     nav.navbar div.navbar__container {
@@ -284,6 +353,17 @@ header {
     }
 }
 
+@media only screen and (max-width: 450px){
+    body {
+        .sixth#sixth {
+            @include block($block-height: 60vh);
+            font-size: 0.6rem;
+            h5 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
 html {
     width: 100%;
 
@@ -305,7 +385,7 @@ html {
             // background: #fff;
 
             .first {
-                @include block();
+                @include block($block-margin: 0);
 
                 .first__content {
                     padding: 10vw;
@@ -319,7 +399,10 @@ html {
                     
                     // border-radius: 10px;
                     // justify-content: center;
-                    
+                    span.arrow {
+                        margin-top: 9%;
+                    }
+
                     span {
                         display: block;
                         @include paragraph();
@@ -372,6 +455,276 @@ html {
                         background-repeat: no-repeat;
                     }
                     
+                }
+            }
+
+            .fourth {
+                @include block($bg-color: #000, $block-margin: 0);
+
+                .fourth__content {
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(0, 0, 0);
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+
+                    
+                    .fourth__img {
+                        width: 40%;
+                        height: 100%;
+                        background-image: url('images/mainpage/3.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    .text {
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+                        span {
+                            @include paragraph();
+                        }
+
+                        h3 {
+                            @include header-3-1400();
+                        }
+                    }
+                }
+            }
+
+            .fifth {
+                @include block();
+
+                .fifth__content {
+                    padding: 10vw;
+                    background-image: url('images/6.jpg');
+                    width: 100%;
+                    height: 100%;
+                    background-position: bottom;
+                    background-size: cover;
+                    display: flex;
+                    flex-direction: column;
+
+                    span.arrow {
+                        margin-top: 9%;
+                    }
+
+                    span {
+                        display: block;
+                        @include paragraph();
+                    }
+
+                    h3 {
+                        @include header-3-1400();
+                    }
+                }
+            }
+
+            .sixth {
+                @include block($block-height: 184vh);
+                
+                .sixth__content {
+                    height: 100%;
+                    width: 100%;
+                }
+                h2 {
+                    font-family: Avenir;
+                    font-size: 3rem;
+                    font-weight: 800px;
+                    text-align: center;
+                    display: block;
+                    margin-bottom: 50px;
+                }
+
+                div.parent {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    
+                    
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    >.child {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        flex-wrap: no-wrap;
+                        margin: 0.5vh;
+
+                        .img1 {
+                            background-image: url('images/grid/1.jpg');
+                            @include img-grid();
+                            transition: all 0.4s ease-in-out;
+                            
+                            h5{
+                                @include header-5-1400();
+                            }
+
+                            span{
+                                text-align: center;
+                            }
+
+                            .child {
+                                display: block;
+                                opacity: 0;
+                                transition: all 0.2s ease-in-out;
+                                background-color: rgba(0, 0, 0, 0.411);
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+                                transition: all 0.3s ease-in-out;
+                                .child {
+                                    opacity: 1;
+                                    transition: all 0.2s ease-in-out;
+                                }
+                            }
+                        }
+                        .img2 {
+                            background-image: url('images/grid/2.jpg');
+                            @include img-grid();
+                            
+
+                        }      
+                        .img3 {
+                            background-image: url('images/grid/3.jpg');
+                            @include img-grid();
+                            transition: all 0.4s ease-in-out;
+                            
+                            h5{
+                                @include header-5-1400();
+                            }
+                            
+                            span{
+                                text-align: center;
+                            }
+
+                            .child {
+                                display: block;
+                                opacity: 0;
+                                transition: all 0.2s ease-in-out;
+                                background-color: rgba(0, 0, 0, 0.411);
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+                                transition: all 0.3s ease-in-out;
+                                .child {
+                                    opacity: 1;
+                                    transition: all 0.2s ease-in-out;
+                                }
+                            }
+                        }      
+                        .img4 {
+                            background-image: url('images/grid/4.jpg');
+                            @include img-grid();
+                        }
+                        .img5 {
+                            background-image: url('images/grid/5.jpg');
+                            @include img-grid();
+                            transition: all 0.4s ease-in-out;
+                            
+                            h5{
+                                @include header-5-1400();
+                            }
+                            
+                            span{
+                                text-align: center;
+                            }
+
+                            .child {
+                                display: block;
+                                opacity: 0;
+                                transition: all 0.2s ease-in-out;
+                                background-color: rgba(0, 0, 0, 0.411);
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+                                transition: all 0.3s ease-in-out;
+                                .child {
+                                    opacity: 1;
+                                    transition: all 0.2s ease-in-out;
+                                }
+                            }
+                        }
+                        .img6 {
+                            background-image: url('images/grid/6.jpg');
+                            @include img-grid();
+                        }
+                        .img7 {
+                            background-image: url('images/grid/7.jpeg');
+                            @include img-grid();
+                            transition: all 0.4s ease-in-out;
+                            
+                            h5{
+                                @include header-5-1400();
+                            }
+                            
+                            span{
+                                text-align: center;
+                            }
+
+                            .child {
+                                display: block;
+                                opacity: 0;
+                                transition: all 0.2s ease-in-out;
+                                background-color: rgba(0, 0, 0, 0.411);
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+                                transition: all 0.3s ease-in-out;
+                                .child {
+                                    opacity: 1;
+                                    transition: all 0.2s ease-in-out;
+                                }
+                            }
+                        }
+                        .img8 {
+                            background-image: url('images/grid/8.jpeg');
+                            @include img-grid();
+                        }
+                        .img9 {
+                            background-image: url('images/grid/9.jpeg');
+                            @include img-grid();
+                            transition: all 0.4s ease-in-out;
+                            
+                            h5{
+                                @include header-5-1400();
+                            }
+                            
+                            span{
+                                text-align: center;
+                            }
+
+                            .child {
+                                display: block;
+                                opacity: 0;
+                                transition: all 0.2s ease-in-out;
+                                background-color: rgba(0, 0, 0, 0.411);
+                            }
+
+                            &:hover {
+                                transform: scale(0.95);
+                                transition: all 0.3s ease-in-out;
+                                .child {
+                                    opacity: 1;
+                                    transition: all 0.2s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                            
                 }
             }
         }

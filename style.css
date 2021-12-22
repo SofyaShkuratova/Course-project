@@ -103,6 +103,16 @@ header .navbar__container > .navbar__menu > li.navbar__item > .navbar__links:hov
   transition: all 0.3s ease;
 }
 
+@media only screen and (max-width: 1200px) {
+  body .sixth#sixth {
+    width: 100%;
+    height: 105vh;
+    background-color: #fff;
+    padding: 5vw 8vw;
+    margin: 0 0;
+  }
+}
+
 @media only screen and (max-width: 980px) {
   .slider {
     display: none;
@@ -150,6 +160,55 @@ header .navbar__container > .navbar__menu > li.navbar__item > .navbar__links:hov
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  html .fourth#fourth .fourth__content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    background-color: #000000;
+  }
+  html .fourth#fourth .fourth__content .text {
+    padding: 5% 0;
+    width: 75%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  html .fourth#fourth .fourth__content .fourth__img {
+    background-image: url("images/mainpage/3.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  html .sixth#sixth {
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    padding: 5vw 8vw;
+    margin: 0 0;
   }
   nav.navbar div.navbar__container {
     display: -webkit-box;
@@ -295,6 +354,20 @@ header .navbar__container > .navbar__menu > li.navbar__item > .navbar__links:hov
   }
 }
 
+@media only screen and (max-width: 450px) {
+  body .sixth#sixth {
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+    padding: 5vw 8vw;
+    margin: 0 0;
+    font-size: 0.6rem;
+  }
+  body .sixth#sixth h5 {
+    font-size: 1rem;
+  }
+}
+
 html {
   width: 100%;
 }
@@ -331,7 +404,7 @@ html body main .first {
   height: 100vh;
   background-color: #fff;
   padding: 5vw 8vw;
-  margin: 3vw 0;
+  margin: 0;
 }
 
 html body main .first .first__content {
@@ -348,6 +421,10 @@ html body main .first .first__content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+html body main .first .first__content span.arrow {
+  margin-top: 9%;
 }
 
 html body main .first .first__content span {
@@ -380,7 +457,7 @@ html body main .third {
   height: 100vh;
   background-color: #000;
   padding: 5vw 8vw;
-  margin: 3vw 0;
+  margin: 0 0;
 }
 
 html body main .third .third__content {
@@ -449,6 +526,606 @@ html body main .third .third__content .img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+html body main .fourth {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  padding: 5vw 8vw;
+  margin: 0;
+}
+
+html body main .fourth .fourth__content {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+html body main .fourth .fourth__content .fourth__img {
+  width: 40%;
+  height: 100%;
+  background-image: url("images/mainpage/3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html body main .fourth .fourth__content .text {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body main .fourth .fourth__content .text span {
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Avenir', sans-serif;
+  text-transform: none;
+  line-height: 20px;
+  font-style: normal;
+  width: 100%;
+}
+
+html body main .fourth .fourth__content .text h3 {
+  text-align: left;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Avenir', sans-serif;
+  text-transform: none;
+  line-height: 47px;
+  font-style: normal;
+  margin: 1rem 0 2rem;
+}
+
+html body main .fifth {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 5vw 8vw;
+  margin: 0 0;
+}
+
+html body main .fifth .fifth__content {
+  padding: 10vw;
+  background-image: url("images/6.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body main .fifth .fifth__content span.arrow {
+  margin-top: 9%;
+}
+
+html body main .fifth .fifth__content span {
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Avenir', sans-serif;
+  text-transform: none;
+  line-height: 20px;
+  font-style: normal;
+  width: 100%;
+}
+
+html body main .fifth .fifth__content h3 {
+  text-align: left;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Avenir', sans-serif;
+  text-transform: none;
+  line-height: 47px;
+  font-style: normal;
+  margin: 1rem 0 2rem;
+}
+
+html body main .sixth {
+  width: 100%;
+  height: 184vh;
+  background-color: #fff;
+  padding: 5vw 8vw;
+  margin: 0 0;
+}
+
+html body main .sixth .sixth__content {
+  height: 100%;
+  width: 100%;
+}
+
+html body main .sixth h2 {
+  font-family: Avenir;
+  font-size: 3rem;
+  font-weight: 800px;
+  text-align: center;
+  display: block;
+  margin-bottom: 50px;
+}
+
+html body main .sixth div.parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body main .sixth div.parent > .child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin: 0.5vh;
+}
+
+html body main .sixth div.parent > .child .img1 {
+  background-image: url("images/grid/1.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img1 h5 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  text-transform: none;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+
+html body main .sixth div.parent > .child .img1 span {
+  text-align: center;
+}
+
+html body main .sixth div.parent > .child .img1 .child {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+html body main .sixth div.parent > .child .img1:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img1:hover .child {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img2 {
+  background-image: url("images/grid/2.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main .sixth div.parent > .child .img3 {
+  background-image: url("images/grid/3.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img3 h5 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  text-transform: none;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+
+html body main .sixth div.parent > .child .img3 span {
+  text-align: center;
+}
+
+html body main .sixth div.parent > .child .img3 .child {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+html body main .sixth div.parent > .child .img3:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img3:hover .child {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img4 {
+  background-image: url("images/grid/4.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main .sixth div.parent > .child .img5 {
+  background-image: url("images/grid/5.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img5 h5 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  text-transform: none;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+
+html body main .sixth div.parent > .child .img5 span {
+  text-align: center;
+}
+
+html body main .sixth div.parent > .child .img5 .child {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+html body main .sixth div.parent > .child .img5:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img5:hover .child {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img6 {
+  background-image: url("images/grid/6.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main .sixth div.parent > .child .img7 {
+  background-image: url("images/grid/7.jpeg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img7 h5 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  text-transform: none;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+
+html body main .sixth div.parent > .child .img7 span {
+  text-align: center;
+}
+
+html body main .sixth div.parent > .child .img7 .child {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+html body main .sixth div.parent > .child .img7:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img7:hover .child {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img8 {
+  background-image: url("images/grid/8.jpeg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main .sixth div.parent > .child .img9 {
+  background-image: url("images/grid/9.jpeg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img9 h5 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  text-transform: none;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+
+html body main .sixth div.parent > .child .img9 span {
+  text-align: center;
+}
+
+html body main .sixth div.parent > .child .img9 .child {
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+html body main .sixth div.parent > .child .img9:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+html body main .sixth div.parent > .child .img9:hover .child {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .slider {
