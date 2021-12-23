@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir';
+    scroll-behavior: smooth;
+}
+
+@mixin block ($bg-color: #fff, $block-margin: 0 0, $block-height: 100vh){
+    width: 100%;
+    height: $block-height;
+    background-color: $bg-color;
+    padding: 0 8vw;
+    margin: $block-margin;
+}
+
+@mixin h3 ($h3-color: #000){
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 54px;
+    letter-spacing: 0.1em;
+    color: $h3-color;
+}
+
+@mixin img ($bg-image: url('1.jpg')) {
+    width: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//navigation
+header {
+    div#header__block {
+        background-color: #fff;
+        height: 80px;
+        width: 100%;
+    }
+    .navbar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 91;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 50px;
+        
+        >#navbar__logo {
+            background-size: 100%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #000;
+            font-family: 'Josefin Sans';
+        }
+
+        >.navbar__menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            color: #000;
+            
+            >li.navbar__item {
+                height: 80px;
+                color: #000;
+
+                >.navbar__links {
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 125px;
+                    text-decoration: none;
+                    height: 100%;
+                    transition: all 0.4s ease;
+
+                    &:hover {
+                        color: #838383;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+main {
+    .one {
+        @include block();
+
+        .one__parent {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .one__child{
+                width: 50%;
+                height: 100%;
+                background-color: #FF8D8D;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .one__img {
+                    @include img();
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: scale(1.05);
+                        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.20);
+                    }
+                }
+            }
+
+            .two__child {
+                @include text();
+
+                h3 {
+                    @include h3($h3-color:#FF8D8D);
+                }
+            }
+        }
+    }
+
+    .two {
+        @include block();
+
+        .two__parent{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .one__child {
+                @include text();
+
+                h3 {
+                    @include h3($h3-color: #F4F0C3);
+                }
+            }
+
+            .two__child {
+                width: 50%;
+                height: 100%;
+                background-color: #F4F0C3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .two__img {
+                    @include img();
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: scale(1.05);
+                        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.20);
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
