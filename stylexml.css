@@ -1,0 +1,26 @@
+INROTMATION {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+SITE {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Avenir;
+    font-size: 20px;
+}
+
+TITLE, AUTHOR, YEAR, INF {
+    border: 1px solid #ffffff;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Avenir;
+    font-size: 20px;
+    text-decoration: underline;
+}
+

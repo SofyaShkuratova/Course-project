@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/xsl" href="stylexml.css"?>
-<information>
-  <site category="author">
-    <title lang="en">Site made for</title>
-    <author>Shkuratova Sofya</author>
-    <year>2021</year>
-  </site>
-  <site category="client">
-    <title lang="en">Photographer</title>
-    <author>Michaela Yarotskaya</author>
-    <year>2021</year>
-  </site>
-</information>
+<?xml-stylesheet type="text/css" href="stylexml.css"?>
+<INFORMATION>
+  <SITE category="author">
+    <TITLE lang="en">Site made by</TITLE>
+    <AUTHOR>Shkuratova Sofya</AUTHOR>
+    <YEAR>2021</YEAR>
+    <INF>2 course 9 group ДЭиВи</INF>
+  </SITE>
+  <SITE category="client">
+    <INF>for</INF>
+    <TITLE lang="en">Photographer</TITLE>
+    <AUTHOR>Michaela Yarotskaya</AUTHOR>
+    <YEAR>2021</YEAR>
+  </SITE>
+</INFORMATION>
